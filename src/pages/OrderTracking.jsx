@@ -67,7 +67,6 @@ export default function OrderTracking() {
     return () => clearInterval(timer);
   }, [order]);
 
-  // Fallback state if no active order is found
   if (!order) {
     return (
       <main className="relative min-h-screen overflow-hidden bg-[#faf8f3] px-5 pb-20 pt-32">
@@ -114,12 +113,10 @@ export default function OrderTracking() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#faf8f3] px-5 pb-20 pt-28 sm:px-8 lg:px-10">
-      {/* Dynamic Background Glows */}
       <div className="pointer-events-none absolute -left-20 -top-20 h-96 w-96 rounded-full bg-[#a17b38]/10 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-96 w-96 rounded-full bg-[#d5b777]/15 blur-[120px]" />
 
       <div className="mx-auto max-w-full">
-        {/* Navigation Link */}
         <Link
           to="/"
           className="group inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-black/40 transition hover:text-[#a17b38]"
@@ -128,7 +125,6 @@ export default function OrderTracking() {
           Back to Store
         </Link>
 
-        {/* Page Header */}
         <div className="mt-6 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
           <div>
             <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-[#a17b38]">
@@ -149,14 +145,12 @@ export default function OrderTracking() {
           </div>
         </div>
 
-        {/* Live Status Glass Banner */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="relative mt-8 overflow-hidden rounded-[2.5rem] border border-white/90 bg-white/80 p-6 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] backdrop-blur-2xl sm:p-10"
         >
-          {/* Subtle Ambient Light inside Card */}
           <div className="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-[#a17b38]/10 blur-2xl" />
 
           <div className="flex flex-col justify-between gap-6 sm:flex-row sm:items-center">
@@ -187,7 +181,6 @@ export default function OrderTracking() {
               </AnimatePresence>
             </div>
 
-            {/* Dynamic Icon Badge */}
             <motion.div
               key={currentStep}
               initial={{ scale: 0.8, rotate: -10 }}
@@ -199,11 +192,9 @@ export default function OrderTracking() {
             </motion.div>
           </div>
 
-          {/* Stepper Progress Bar */}
           <div className="relative mt-12 px-2">
             <div className="h-2 w-full rounded-full bg-black/5" />
 
-            {/* Progress Line */}
             <motion.div
               className="absolute left-2 top-0 h-2 rounded-full bg-gradient-to-r from-[#11110f] via-[#a17b38] to-[#d5b777] shadow-[0_0_12px_rgba(161,123,56,0.4)]"
               initial={{ width: 0 }}
@@ -211,7 +202,6 @@ export default function OrderTracking() {
               transition={{ duration: 0.8, ease: "easeInOut" }}
             />
 
-            {/* Step Checkpoints */}
             <div className="absolute -top-3 left-0 flex w-full justify-between">
               {steps.map((step, index) => {
                 const isPassed = index <= currentStep;
@@ -243,7 +233,6 @@ export default function OrderTracking() {
             </div>
           </div>
 
-          {/* Responsive Step Titles */}
           <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-5 sm:gap-4">
             {steps.map((step, index) => {
               const isActive = index <= currentStep;
@@ -268,9 +257,7 @@ export default function OrderTracking() {
           </div>
         </motion.div>
 
-        {/* Details Cards Section */}
         <div className="mt-8 grid gap-6 lg:grid-cols-2">
-          {/* Delivery Details Card */}
           <motion.div
             whileHover={{ y: -4 }}
             transition={{ type: "spring", stiffness: 300 }}

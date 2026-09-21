@@ -104,7 +104,6 @@ export default function Payment({ cart = [], onOrderPlaced }) {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#faf8f3] px-4 pb-20 pt-28 sm:px-6 lg:px-10">
-      {/* Background Ambient Glows */}
       <div className="pointer-events-none absolute -left-20 top-1/4 h-[500px] w-[500px] rounded-full bg-[#a17b38]/10 blur-[140px]" />
       <div className="pointer-events-none absolute -right-20 top-1/3 h-[500px] w-[500px] rounded-full bg-[#d5b777]/15 blur-[140px]" />
 
@@ -118,7 +117,6 @@ export default function Payment({ cart = [], onOrderPlaced }) {
         </Link>
 
         <div className="grid gap-8 lg:grid-cols-[1fr_400px]">
-          {/* Payment Section */}
           <section>
             <div className="mb-8">
               <span className="inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.3em] text-[#a17b38]">
@@ -156,7 +154,6 @@ export default function Payment({ cart = [], onOrderPlaced }) {
                   </div>
                 </div>
 
-                {/* Option Selector Grid */}
                 <div className="mt-6 grid gap-3 sm:grid-cols-3">
                   <PaymentOption
                     active={paymentMethod === "card"}
@@ -183,7 +180,6 @@ export default function Payment({ cart = [], onOrderPlaced }) {
                   />
                 </div>
 
-                {/* Form Fields */}
                 <AnimatePresence mode="wait">
                   {paymentMethod === "card" && (
                     <motion.div
@@ -273,13 +269,11 @@ export default function Payment({ cart = [], onOrderPlaced }) {
                   )}
                 </AnimatePresence>
 
-                {/* Security Tag */}
                 <div className="mt-8 flex items-center justify-center gap-2 rounded-2xl border border-black/5 bg-[#faf8f3] py-3.5 text-xs font-medium text-black/60">
                   <Lock size={14} className="text-[#a17b38]" />
                   <span>Protected by 256-bit SSL Banking Protocol</span>
                 </div>
 
-                {/* Submit Action Button */}
                 <motion.button
                   whileHover={{ scale: 1.01, y: -2 }}
                   whileTap={{ scale: 0.98 }}
@@ -304,7 +298,6 @@ export default function Payment({ cart = [], onOrderPlaced }) {
             </form>
           </section>
 
-          {/* Sidebar Order Summary */}
           <aside className="h-fit rounded-[2.5rem] border border-white/60 bg-white/80 p-6 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.05)] backdrop-blur-xl lg:sticky lg:top-28">
             <h2 className="font-serif text-2xl font-light text-[#11110f]">Order Summary</h2>
             <p className="mt-1 text-xs text-black/40">{cart.length} item(s) in your bag</p>
@@ -384,7 +377,6 @@ function PaymentOption({ active, onClick, icon, title, description }) {
           : "border-black/10 bg-[#faf8f3] text-black hover:border-black/30 hover:bg-white"
       }`}
     >
-      {/* Active Indicator Badge */}
       <AnimatePresence>
         {active && (
           <motion.div

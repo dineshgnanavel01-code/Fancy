@@ -9,7 +9,6 @@ function Card3DWrapper({ children, className = "" }) {
 
   const mouseXSpring = useSpring(x, { stiffness: 300, damping: 20 });
   const mouseYSpring = useSpring(y, { stiffness: 300, damping: 20 });
-
   const rotateX = useTransform(mouseYSpring, [-0.5, 0.5], ["12deg", "-12deg"]);
   const rotateY = useTransform(mouseXSpring, [-0.5, 0.5], ["-12deg", "12deg"]);
 
@@ -152,7 +151,6 @@ export default function Cart({
                         style={{ transform: "translateZ(30px)" }}
                         className="flex gap-4 sm:gap-6"
                       >
-                        {/* 3D Floating Product Image */}
                         <motion.div
                           whileHover={{ scale: 1.05, rotateZ: -1 }}
                           className="relative h-32 w-24 shrink-0 overflow-hidden rounded-2xl shadow-md sm:h-36 sm:w-28"
@@ -165,7 +163,6 @@ export default function Cart({
                         </motion.div>
 
                         <div className="min-w-0 flex-1">
-                          {/* Info */}
                           <div className="flex justify-between gap-4">
                             <div>
                               <p className="text-[10px] uppercase tracking-[0.2em] text-[#a17b38]">
@@ -177,7 +174,6 @@ export default function Cart({
                               </h2>
                             </div>
 
-                            {/* Remove Button */}
                             <motion.button
                               whileHover={{ scale: 1.15, rotate: 10 }}
                               whileTap={{ scale: 0.9 }}
@@ -190,9 +186,7 @@ export default function Cart({
                             </motion.button>
                           </div>
 
-                          {/* Controls & Pricing */}
                           <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-                            {/* Quantity Control */}
                             <div className="flex items-center rounded-full border border-black/10 bg-[#faf8f3] p-1">
                               <motion.button
                                 whileTap={{ scale: 0.8 }}
@@ -223,7 +217,6 @@ export default function Cart({
                               </motion.button>
                             </div>
 
-                            {/* Price Display */}
                             <div className="text-right">
                               <p className="font-serif text-lg font-medium text-[#11110f]">
                                 ₹{(item.price * quantity).toLocaleString("en-IN")}
@@ -253,7 +246,6 @@ export default function Cart({
                 </div>
 
                 <div className="mt-6 space-y-4 text-sm">
-                  {/* Subtotal */}
                   <div className="flex justify-between">
                     <span className="text-black/45">Subtotal</span>
                     <span className="font-medium">
@@ -261,7 +253,6 @@ export default function Cart({
                     </span>
                   </div>
 
-                  {/* Shipping */}
                   <div className="flex justify-between">
                     <span className="text-black/45">Shipping</span>
                     <span className="font-medium text-[#a17b38]">
@@ -271,7 +262,6 @@ export default function Cart({
                     </span>
                   </div>
 
-                  {/* Total */}
                   <div className="border-t border-black/10 pt-4">
                     <div className="flex justify-between items-baseline">
                       <span className="font-medium text-[#11110f]">
@@ -285,7 +275,6 @@ export default function Cart({
                   </div>
                 </div>
 
-                {/* PAYMENT BUTTON WITH 3D POP */}
                 <motion.div
                   whileHover={{ scale: 1.02, translateZ: "40px" }}
                   whileTap={{ scale: 0.98 }}

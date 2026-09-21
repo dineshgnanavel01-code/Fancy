@@ -30,7 +30,6 @@ const handleSubmit = (e) => {
 
   return (
     <main className="min-h-screen bg-[#faf8f3] pb-20 pt-28 sm:pt-32">
-      {/* HEADER SECTION */}
       <section className="relative overflow-hidden px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         <div className="pointer-events-none absolute left-[-100px] top-10 h-64 w-64 rounded-full bg-[#d5b777]/15 blur-3xl" />
         <div className="pointer-events-none absolute bottom-0 right-[-100px] h-72 w-72 rounded-full bg-[#a17b38]/15 blur-3xl" />
@@ -60,11 +59,9 @@ const handleSubmit = (e) => {
         </div>
       </section>
 
-      {/* CONTENT SECTION (INFO & FORM) */}
       <section className="px-4 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-stretch gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           
-          {/* Contact Information Box */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -160,7 +157,6 @@ const handleSubmit = (e) => {
             </div>
           </motion.div>
 
-          {/* Contact Form Box */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}

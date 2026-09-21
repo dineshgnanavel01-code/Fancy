@@ -77,7 +77,6 @@ export default function Testimonials() {
 
   const item = testimonials[current];
 
-  // Automatic testimonial rotation
   useEffect(() => {
     const timer = setInterval(() => {
       setDirection(1);
@@ -123,7 +122,7 @@ export default function Testimonials() {
         }}
       />
 
-      {/* Floating decorative sparkles */}
+      
       <motion.div
         className="pointer-events-none absolute left-[12%] top-[25%] text-[#a17b38]/30"
         animate={{
@@ -167,7 +166,6 @@ export default function Testimonials() {
           perspective: 1200,
         }}
       >
-        {/* Section heading */}
         <motion.div variants={itemVariants}>
           <motion.p
             className="text-xs font-semibold uppercase tracking-[0.3em] text-[#a17b38]"
@@ -216,7 +214,7 @@ export default function Testimonials() {
           className="relative mx-auto mt-14 max-w-4xl"
         >
           <div className="relative overflow-hidden rounded-[2rem] border border-black/[0.06] bg-white/70 px-5 py-12 shadow-[0_25px_80px_rgba(0,0,0,0.07)] backdrop-blur-xl sm:px-10 sm:py-14 lg:px-16">
-            {/* Decorative quote */}
+    
             <motion.div
               className="absolute left-5 top-5 text-[#a17b38]/10 sm:left-8 sm:top-8"
               animate={{
@@ -232,7 +230,7 @@ export default function Testimonials() {
               <Quote size={70} />
             </motion.div>
 
-            {/* Top glow */}
+        
             <motion.div
               className="pointer-events-none absolute left-1/2 top-0 h-32 w-64 -translate-x-1/2 rounded-full bg-[#d5b777]/10 blur-3xl"
               animate={{
@@ -281,7 +279,7 @@ export default function Testimonials() {
                   perspective: 1200,
                 }}
               >
-                {/* Profile image */}
+                
                 <motion.div
                   className="relative mx-auto h-24 w-24 sm:h-28 sm:w-28"
                   whileHover={{
@@ -295,7 +293,7 @@ export default function Testimonials() {
                     damping: 18,
                   }}
                 >
-                  {/* Rotating ring */}
+                 
                   <motion.div
                     className="absolute -inset-2 rounded-full border border-dashed border-[#a17b38]/30"
                     animate={{
@@ -308,7 +306,7 @@ export default function Testimonials() {
                     }}
                   />
 
-                  {/* Gold ring */}
+                  
                   <div className="absolute -inset-1 rounded-full border border-[#d5b777]/50" />
 
                   <motion.img
@@ -323,7 +321,6 @@ export default function Testimonials() {
                     }}
                   />
 
-                  {/* Verified badge */}
                   <motion.div
                     className="absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-[#a17b38] text-[10px] text-white shadow-lg"
                     initial={{
@@ -342,7 +339,6 @@ export default function Testimonials() {
                   </motion.div>
                 </motion.div>
 
-                {/* Stars */}
                 <motion.div
                   className="mt-6 flex justify-center gap-1"
                   initial={{
@@ -391,12 +387,11 @@ export default function Testimonials() {
                   )}
                 </motion.div>
 
-                {/* Review */}
                 <p className="mx-auto mt-7 max-w-2xl font-serif text-xl italic leading-relaxed text-[#252525] sm:text-2xl lg:text-3xl">
                   “{item.text}”
                 </p>
 
-                {/* Name */}
+              
                 <motion.p
                   className="mt-7 text-sm font-semibold tracking-wide"
                   initial={{
@@ -420,7 +415,6 @@ export default function Testimonials() {
               </motion.div>
             </AnimatePresence>
 
-            {/* Bottom decorative line */}
             <motion.div
               className="mx-auto mt-10 h-px bg-gradient-to-r from-transparent via-[#a17b38]/40 to-transparent"
               initial={{
@@ -439,12 +433,10 @@ export default function Testimonials() {
           </div>
         </motion.div>
 
-        {/* Controls */}
         <motion.div
           variants={itemVariants}
           className="mt-9 flex items-center justify-center gap-4"
         >
-          {/* Previous */}
           <motion.button
             type="button"
             onClick={previous}
@@ -464,7 +456,6 @@ export default function Testimonials() {
             />
           </motion.button>
 
-          {/* Dots */}
           <div className="flex items-center gap-2">
             {testimonials.map((_, index) => (
               <motion.button
@@ -498,7 +489,6 @@ export default function Testimonials() {
             ))}
           </div>
 
-          {/* Next */}
           <motion.button
             type="button"
             onClick={next}
@@ -519,7 +509,6 @@ export default function Testimonials() {
           </motion.button>
         </motion.div>
 
-        {/* Customer count */}
         <motion.div
           variants={itemVariants}
           className="mt-12 flex flex-wrap items-center justify-center gap-6 text-center"

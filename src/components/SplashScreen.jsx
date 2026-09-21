@@ -61,7 +61,6 @@ export default function SplashScreen({ onComplete }) {
     >
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#181510_0%,#0a0a09_100%)]" />
 
-      {/* Pulsing Light Orbs */}
       <motion.div
         className="pointer-events-none absolute left-1/2 top-1/2 h-[550px] w-[550px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d5b777]/10 blur-[140px]"
         animate={{
@@ -80,7 +79,6 @@ export default function SplashScreen({ onComplete }) {
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      {/* Grid Pattern Overlay */}
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)]" />
       {floatingCards.map((card, idx) => {
         const CardIcon = card.icon;
@@ -142,7 +140,6 @@ export default function SplashScreen({ onComplete }) {
           className="relative flex flex-col items-center justify-center"
           style={{ transformStyle: "preserve-3d" }}
         >
-          {/* Outer Orbit Rings */}
           <motion.div
             animate={{ rotateZ: 360, rotateX: [0, 25, 0] }}
             transition={{
@@ -165,7 +162,6 @@ export default function SplashScreen({ onComplete }) {
             <span className="absolute bottom-0 right-1/2 h-2 w-2 translate-x-1/2 rounded-full bg-[#a17b38] shadow-[0_0_12px_#a17b38]" />
           </motion.div>
 
-          {/* Central Monogram Emblem */}
           <motion.div
             initial={{ scale: 0.5, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -173,14 +169,12 @@ export default function SplashScreen({ onComplete }) {
             whileHover={{ scale: 1.05, rotateY: 15 }}
             className="group relative flex h-36 w-36 items-center justify-center rounded-full border border-[#d5b777]/40 bg-gradient-to-b from-[#1c1913] to-[#0a0a09] shadow-[0_0_80px_rgba(161,123,56,0.25)] sm:h-44 sm:w-44"
           >
-            {/* Inner Rotating Ring */}
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
               className="absolute inset-2 rounded-full border border-transparent border-t-[#d5b777]"
             />
 
-            {/* Glowing Backdrop */}
             <div className="absolute inset-0 rounded-full bg-[#d5b777]/10 blur-xl transition duration-500 group-hover:bg-[#d5b777]/20" />
 
             <div className="relative z-10 text-center">
@@ -191,7 +185,6 @@ export default function SplashScreen({ onComplete }) {
             </div>
           </motion.div>
 
-          {/* Brand Title */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -253,7 +246,6 @@ export default function SplashScreen({ onComplete }) {
     
       {closing && (
         <>
-          {/* Layer 1: Dark Bronze */}
           <motion.div
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 1 }}
@@ -261,7 +253,6 @@ export default function SplashScreen({ onComplete }) {
             className="absolute inset-0 z-30 origin-bottom bg-[#2b2214]"
           />
 
-          {/* Layer 2: Signature Gold */}
           <motion.div
             initial={{ scaleY: 0 }}
             animate={{ scaleY: 1 }}

@@ -59,7 +59,6 @@ export default function FeaturedProducts({ onAddToCart, onWishlist }) {
     >
       <div className="mx-auto max-w-[1800px]">
 
-        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 35 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +77,6 @@ export default function FeaturedProducts({ onAddToCart, onWishlist }) {
           <div className="luxe-divider mx-auto mt-5" />
         </motion.div>
 
-        {/* Category Filter */}
         <div className="mt-10 flex gap-2 overflow-x-auto pb-3 scrollbar-hide">
           {categories.map((category) => (
             <motion.button
@@ -98,7 +96,6 @@ export default function FeaturedProducts({ onAddToCart, onWishlist }) {
           ))}
         </div>
 
-        {/* Product Grid */}
         <motion.div
           layout
           className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
@@ -145,13 +142,8 @@ export default function FeaturedProducts({ onAddToCart, onWishlist }) {
                   }}
                   className="product-card group flex flex-col justify-between overflow-hidden rounded-3xl bg-white shadow-sm"
                 >
-
-                  {/* =========================
-                      IMAGE SECTION
-                  ========================== */}
                   <div className="relative flex h-[360px] w-full items-center justify-center overflow-hidden bg-[#f8f6f1] sm:h-[400px]">
 
-                    {/* Product Image */}
                     <motion.img
                       src={product.image}
                       alt={product.name}
@@ -164,11 +156,8 @@ export default function FeaturedProducts({ onAddToCart, onWishlist }) {
                         ease: "easeOut",
                       }}
                     />
-
-                    {/* Soft Image Overlay */}
                     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/[0.04] via-transparent to-white/10" />
 
-                    {/* New Badge */}
                     {product.newArrival && (
                       <motion.span
                         initial={{
@@ -185,14 +174,12 @@ export default function FeaturedProducts({ onAddToCart, onWishlist }) {
                       </motion.span>
                     )}
 
-                    {/* Discount Badge */}
                     {discount > 0 && (
                       <span className="absolute bottom-4 left-4 rounded-full bg-black px-3 py-1.5 text-[10px] text-white shadow-sm">
                         -{discount}%
                       </span>
                     )}
 
-                    {/* Wishlist Button */}
                     <motion.button
                       type="button"
                       whileHover={{
@@ -236,27 +223,19 @@ export default function FeaturedProducts({ onAddToCart, onWishlist }) {
                       </motion.div>
                     </motion.button>
 
-                    {/* Hover Bottom Gradient */}
                     <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   </div>
-
-                  {/* =========================
-                      PRODUCT CONTENT
-                  ========================== */}
                   <div className="flex flex-1 flex-col justify-between p-5">
 
                     <div>
-                      {/* Category */}
                       <p className="text-[11px] uppercase tracking-wider text-black/40">
                         {product.category}
                       </p>
 
-                      {/* Product Name */}
                       <h3 className="mt-2 text-base font-medium text-zinc-900">
                         {product.name}
                       </h3>
 
-                      {/* Rating */}
                       <div className="mt-3 flex items-center gap-2">
                         <div className="flex items-center gap-1">
                           <Star
@@ -295,7 +274,6 @@ export default function FeaturedProducts({ onAddToCart, onWishlist }) {
                       </div>
                     </div>
 
-                    {/* Add To Cart Button */}
                     <motion.button
                       type="button"
                       whileHover={{
@@ -361,7 +339,6 @@ export default function FeaturedProducts({ onAddToCart, onWishlist }) {
           </AnimatePresence>
         </motion.div>
 
-        {/* Empty State */}
         {filteredProducts.length === 0 && (
           <motion.div
             initial={{

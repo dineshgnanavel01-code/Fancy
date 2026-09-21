@@ -14,10 +14,8 @@ export default function Signup() {
     password: "",
   });
 
-  // 3D Motion Tilt Values for Image Card
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-
   const springConfig = { stiffness: 400, damping: 25 };
   const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [8, -8]), springConfig);
   const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-8, 8]), springConfig);
@@ -51,7 +49,6 @@ export default function Signup() {
 
   return (
     <main className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#faf8f3] px-5 py-10 lg:px-10">
-      {/* Background Ambient Blur Orbs */}
       <div className="pointer-events-none absolute -left-20 -top-20 h-96 w-96 rounded-full bg-[#a17b38]/10 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-96 w-96 rounded-full bg-[#d5b777]/15 blur-[120px]" />
 
@@ -62,7 +59,6 @@ export default function Signup() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="grid w-full overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/80 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.07)] backdrop-blur-xl lg:grid-cols-2"
         >
-          {/* Form Side */}
           <div className="order-2 flex items-center justify-center px-7 py-12 sm:px-12 lg:order-1 lg:px-16">
             <div className="w-full max-w-md">
               <Link
@@ -88,7 +84,6 @@ export default function Signup() {
               </div>
 
               <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-                {/* Full Name Input */}
                 <div>
                   <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-black/60">
                     Full Name
@@ -111,7 +106,6 @@ export default function Signup() {
                   </div>
                 </div>
 
-                {/* Email Input */}
                 <div>
                   <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-black/60">
                     Email Address
@@ -134,7 +128,6 @@ export default function Signup() {
                   </div>
                 </div>
 
-                {/* Password Input */}
                 <div>
                   <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-black/60">
                     Password
@@ -166,7 +159,6 @@ export default function Signup() {
                   </div>
                 </div>
 
-                {/* Perks Checklist */}
                 <div className="pt-2 space-y-2">
                   <div className="flex items-center gap-2 text-xs text-black/50">
                     <CheckCircle2 size={14} className="text-[#a17b38]" />
@@ -178,7 +170,6 @@ export default function Signup() {
                   </div>
                 </div>
 
-                {/* Submit Button */}
                 <motion.button
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
@@ -194,7 +185,6 @@ export default function Signup() {
                 </motion.button>
               </form>
 
-              {/* Footer Link */}
               <p className="mt-8 text-center text-sm text-black/50">
                 Already have an account?{" "}
                 <Link

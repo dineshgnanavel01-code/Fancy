@@ -454,13 +454,11 @@ export default function SpecialOffers() {
                 />
               </motion.div>
 
-              {/* DARK GRADIENT */}
 
               <div className="absolute inset-0 bg-gradient-to-r from-[#151513] via-transparent to-transparent lg:from-[#151513]/70 lg:via-transparent" />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10" />
 
-              {/* GOLD LIGHT */}
 
               <motion.div
                 animate={{
@@ -475,7 +473,6 @@ export default function SpecialOffers() {
                 className="absolute inset-y-0 z-10 w-24 -skew-x-12 bg-gradient-to-r from-transparent via-white/20 to-transparent blur-xl"
               />
 
-              {/* FLOATING DISCOUNT BADGE */}
 
               <motion.div
                 style={{
@@ -494,7 +491,6 @@ export default function SpecialOffers() {
                 className="absolute right-5 top-5 z-20 sm:right-8 sm:top-8"
               >
                 <div className="relative flex h-28 w-28 items-center justify-center rounded-full border border-white/20 bg-black/45 shadow-2xl backdrop-blur-xl sm:h-36 sm:w-36">
-                  {/* ROTATING RING */}
 
                   <motion.div
                     animate={{
@@ -525,7 +521,6 @@ export default function SpecialOffers() {
                 </div>
               </motion.div>
 
-              {/* BOTTOM GLASS CARD */}
 
               <motion.div
                 initial={{
@@ -573,7 +568,6 @@ export default function SpecialOffers() {
                 </div>
               </motion.div>
 
-              {/* FLOATING PARTICLES */}
 
               {[...Array(7)].map((_, index) => (
                 <motion.span
@@ -599,7 +593,6 @@ export default function SpecialOffers() {
             </div>
           </div>
 
-          {/* BOTTOM SHINE */}
 
           <motion.div
             animate={{

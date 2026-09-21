@@ -146,24 +146,19 @@ function App() {
             />
 
             <Route
-              path="/contact"
-              element={<Contact />} />
+              path="/contact" element={<Contact />} />
 
             <Route
-              path="/login"
-           element={<Login />} />
+              path="/login" element={<Login />} />
 
             <Route
-              path="/signup"
-              element={<Signup />} />
+              path="/signup" element={<Signup />} />
 
             <Route
-              path="/profile"
-              element={<Profile />}/>
+              path="/profile"element={<Profile />}/>
 
             <Route
-              path="/cart"
-              element={
+              path="/cart" element={
                 <Cart
                   cart={cart}
                   onRemoveFromCart={removeFromCart}

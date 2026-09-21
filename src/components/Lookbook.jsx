@@ -85,9 +85,7 @@ function LookbookImage({
       }}
       className={`group relative [perspective:1000px] ${className}`}
     >
-      {/* Image frame */}
       <div className="relative h-full overflow-hidden rounded-[24px] bg-black shadow-[0_25px_60px_rgba(0,0,0,0.14)]">
-        {/* Image */}
         <motion.img
           src={src}
           alt={alt}
@@ -107,10 +105,8 @@ function LookbookImage({
           className="h-full w-full object-cover"
         />
 
-        {/* Dark luxury gradient */}
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/5 opacity-70 transition-opacity duration-500 group-hover:opacity-90" />
 
-        {/* Gold shine */}
         <motion.div
           initial={{
             x: "-120%",
@@ -127,12 +123,10 @@ function LookbookImage({
           className="pointer-events-none absolute inset-y-0 -left-1/2 w-1/3 skew-x-[-18deg] bg-gradient-to-r from-transparent via-white/25 to-transparent"
         />
 
-        {/* Number */}
         <div className="absolute left-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-black/20 text-[10px] font-semibold tracking-widest text-white backdrop-blur-md">
           {number}
         </div>
 
-        {/* Bottom label */}
         <motion.div
           initial={{
             y: 15,

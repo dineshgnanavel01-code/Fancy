@@ -1,4 +1,3 @@
-// src/components/Newsletter.jsx
 
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -22,7 +21,6 @@ export default function Newsletter() {
       id="newsletter"
       className="relative overflow-hidden bg-[#171717] px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
     >
-      {/* Decorative background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-24 top-10 h-72 w-72 rounded-full bg-[#a17b38]/10 blur-3xl" />
         <div className="absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#d5b777]/10 blur-3xl" />
@@ -72,7 +70,6 @@ export default function Newsletter() {
           }}
           className="relative overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.04] px-5 py-12 text-center shadow-[0_30px_100px_rgba(0,0,0,0.25)] backdrop-blur-xl sm:px-10 sm:py-16 lg:px-20 lg:py-20"
         >
-          {/* Top decorative icon */}
           <motion.div
             initial={{
               opacity: 0,
@@ -96,7 +93,6 @@ export default function Newsletter() {
             <Sparkles size={22} strokeWidth={1.5} />
           </motion.div>
 
-          {/* Small label */}
           <motion.p
             initial={{
               opacity: 0,
@@ -118,7 +114,6 @@ export default function Newsletter() {
             Stay In The Know
           </motion.p>
 
-          {/* Heading */}
           <motion.h2
             initial={{
               opacity: 0,
@@ -144,7 +139,6 @@ export default function Newsletter() {
             world.
           </motion.h2>
 
-          {/* Description */}
           <motion.p
             initial={{
               opacity: 0,
@@ -168,7 +162,6 @@ export default function Newsletter() {
             beautiful from LUXE ORA.
           </motion.p>
 
-          {/* Newsletter form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{
@@ -233,7 +226,6 @@ export default function Newsletter() {
             </motion.button>
           </motion.form>
 
-          {/* Success message */}
           {subscribed && (
             <motion.div
               initial={{
@@ -251,7 +243,6 @@ export default function Newsletter() {
             </motion.div>
           )}
 
-          {/* Privacy note */}
           <motion.p
             initial={{
               opacity: 0,

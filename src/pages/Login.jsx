@@ -10,7 +10,6 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // 3D Motion Tilt Values for Image Card
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -34,7 +33,6 @@ export default function Login() {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Frontend demo login
     localStorage.setItem(
       "luxeoraUser",
       JSON.stringify({
@@ -48,7 +46,6 @@ export default function Login() {
 
   return (
     <main className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#faf8f3] px-5 py-10 lg:px-10">
-      {/* Background Ambient Blur Orbs */}
       <div className="pointer-events-none absolute -left-20 -top-20 h-96 w-96 rounded-full bg-[#a17b38]/10 blur-[120px]" />
       <div className="pointer-events-none absolute -bottom-20 -right-20 h-96 w-96 rounded-full bg-[#d5b777]/15 blur-[120px]" />
 
@@ -59,7 +56,6 @@ export default function Login() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="grid w-full overflow-hidden rounded-[2.5rem] border border-white/60 bg-white/80 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.07)] backdrop-blur-xl lg:grid-cols-2"
         >
-          {/* Image Side with 3D Tilt */}
           <motion.div
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
@@ -75,7 +71,6 @@ export default function Login() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-black/10" />
 
-              {/* Floating Top Badge */}
               <div 
                 style={{ transform: "translateZ(30px)" }}
                 className="absolute left-6 top-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-md"
@@ -84,7 +79,6 @@ export default function Login() {
                 Exclusive Portal
               </div>
 
-              {/* Text Bottom Content */}
               <div 
                 style={{ transform: "translateZ(40px)" }}
                 className="absolute bottom-10 left-10 right-10 text-white"
@@ -105,7 +99,6 @@ export default function Login() {
             </div>
           </motion.div>
 
-          {/* Form Side */}
           <div className="flex items-center justify-center px-7 py-12 sm:px-12 lg:px-16">
             <div className="w-full max-w-md">
               <Link
@@ -131,7 +124,6 @@ export default function Login() {
               </div>
 
               <form onSubmit={handleSubmit} className="mt-8 space-y-5">
-                {/* Email Input */}
                 <div>
                   <label className="mb-2 block text-xs font-semibold uppercase tracking-wider text-black/60">
                     Email Address
@@ -153,7 +145,6 @@ export default function Login() {
                   </div>
                 </div>
 
-                {/* Password Input */}
                 <div>
                   <div className="mb-2 flex items-center justify-between">
                     <label className="text-xs font-semibold uppercase tracking-wider text-black/60">
@@ -192,7 +183,6 @@ export default function Login() {
                   </div>
                 </div>
 
-                {/* Submit Button */}
                 <motion.button
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}

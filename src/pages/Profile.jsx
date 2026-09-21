@@ -120,12 +120,10 @@ export default function Profile() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-[#faf8f3] px-5 pb-20 pt-32 lg:px-10">
-      {/* Background Ambient Blur Orbs */}
       <div className="pointer-events-none absolute -left-20 top-20 h-[500px] w-[500px] rounded-full bg-[#a17b38]/10 blur-[140px]" />
       <div className="pointer-events-none absolute -right-20 top-1/2 h-[500px] w-[500px] rounded-full bg-[#d5b777]/15 blur-[140px]" />
 
       <div className="mx-auto max-w-[1200px]">
-        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -147,7 +145,6 @@ export default function Profile() {
             </p>
           </div>
 
-          {/* Quick Stats Pill */}
           <div className="flex items-center gap-6 rounded-2xl border border-white/60 bg-white/60 p-4 backdrop-blur-md shadow-sm">
             <div>
               <p className="text-[10px] uppercase tracking-wider text-black/40">Member Since</p>
@@ -162,7 +159,6 @@ export default function Profile() {
         </motion.div>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-3">
-          {/* User Profile Card with 3D Interaction */}
           <motion.div
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
@@ -172,11 +168,9 @@ export default function Profile() {
             transition={{ duration: 0.8 }}
             className="relative overflow-hidden rounded-[2.5rem] border border-white/80 bg-white/80 p-8 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.05)] backdrop-blur-xl lg:col-span-1 [perspective:1000px]"
           >
-            {/* Top Accent Gradient */}
             <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#a17b38]/15 to-transparent" />
 
             <div className="relative z-10 flex flex-col items-center text-center">
-              {/* Avatar Circle */}
               <div className="relative flex h-24 w-24 items-center justify-center rounded-full border-2 border-white bg-[#11110f] text-3xl font-light text-white shadow-xl ring-4 ring-[#a17b38]/20">
                 {firstLetter}
                 <span className="absolute bottom-1 right-1 h-4 w-4 rounded-full border-2 border-white bg-emerald-500" />
@@ -190,7 +184,6 @@ export default function Profile() {
                 {user.email}
               </p>
 
-              {/* Security Status Tag */}
               <div className="mt-4 inline-flex items-center gap-1.5 rounded-full bg-black/5 px-3 py-1 text-[11px] font-medium text-black/60">
                 <ShieldCheck size={14} className="text-emerald-600" />
                 Verified Account
@@ -209,7 +202,6 @@ export default function Profile() {
             </div>
           </motion.div>
 
-          {/* Account Options Grid */}
           <div className="grid gap-5 sm:grid-cols-2 lg:col-span-2">
             {actionCards.map((card, index) => {
               const Icon = card.icon;
